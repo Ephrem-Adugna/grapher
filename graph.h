@@ -10,6 +10,8 @@ private:
     int intercept;
     int domainStart;
     int domainEnd;
+    int domainIncrement;
+    int rangeIncrement;
     int consoleHeight;
     int consoleWidth;
 };

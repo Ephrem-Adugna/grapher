@@ -12,8 +12,8 @@ void Graph::WindowSize() {
       struct winsize w;
     // STDOUT_FILENO refers to the standard output file descriptor
     if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &w) == 0) {
-        std::cout << "Lines (Height): " << w.ws_row << std::endl;
-        std::cout << "Columns (Width): " << w.ws_col << std::endl;
+        consoleHeight = w.ws_row;
+        consoleWidth = w.ws_col;
     } else {
         std::cerr << "Failed to get terminal size." << std::endl;
     }
