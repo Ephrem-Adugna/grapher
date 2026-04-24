@@ -15,6 +15,13 @@ void Graph::SetLinear(int s, int b, int dStart, int dEnd) {
     domainEnd = dEnd;
 }
 
+void Graph::PrintFunction() {
+    cout << "y = " << slope << "x";
+    if (intercept >= 0) cout << " + " << intercept;
+    else cout << " - " << -intercept;
+    cout << "  [" << domainStart << ", " << domainEnd << "]" << endl;
+}
+
 void Graph::WindowSize() {
       struct winsize w;
     // STDOUT_FILENO refers to the standard output file descriptor
