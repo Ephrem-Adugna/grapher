@@ -17,8 +17,8 @@ void Graph::SetLinear(int s, int b, int dStart, int dEnd) {
 
 void Graph::PrintFunction() {
     cout << "y = " << slope << "x";
-    if (intercept >= 0) cout << " + " << intercept;
-    else cout << " - " << -intercept;
+    if (intercept > 0) cout << " + " << intercept;
+    else if (intercept < 0) cout << " - " << -intercept;
     cout << "  [" << domainStart << ", " << domainEnd << "]" << endl;
 }
 
