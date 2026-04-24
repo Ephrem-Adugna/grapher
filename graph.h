@@ -4,6 +4,7 @@
 class Graph{
 public:
     Graph();
+    void CreateGraph();
 private:
     void WindowSize();
     int slope;
