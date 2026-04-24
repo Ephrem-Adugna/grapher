@@ -8,6 +8,13 @@ using namespace std;
 Graph::Graph() {
     WindowSize();
 }
+void Graph::SetLinear(int s, int b, int dStart, int dEnd) {
+    slope = s;
+    intercept = b;
+    domainStart = dStart;
+    domainEnd = dEnd;
+}
+
 void Graph::WindowSize() {
       struct winsize w;
     // STDOUT_FILENO refers to the standard output file descriptor
