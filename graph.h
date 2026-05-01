@@ -4,12 +4,14 @@
 class Graph{
 public:
     Graph();
-    void SetLinear(int slope, int intercept, int domainStart, int domainEnd);
-    void PrintFunction();
-    void PlotFunction();
+    void Set(int slope, int intercept, int domainStart, int domainEnd);
+    virtual void PrintFunction() = 0;
+    virtual void PlotFunction() = 0;
 private:
     void WindowSize();
     void GetIncrement();
+
+protected:
     int slope;
     int intercept;
     int domainStart;
